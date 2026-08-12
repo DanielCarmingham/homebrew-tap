@@ -1,25 +1,25 @@
 class Dextui < Formula
-  desc "A two-pane terminal UI for browsing and triaging dex tasks"
+  desc "A terminal UI for browsing and triaging dex tasks, across every repo and worktree you register"
   homepage "https://github.com/DanielCarmingham/dextui"
-  version "0.4.0"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.4.0/dextui-aarch64-apple-darwin.tar.xz"
-      sha256 "095085a7d464c259c9b4216c9c9a4f4e4a7bd53e4ed84c3462fce991f3662df9"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.0/dextui-aarch64-apple-darwin.tar.xz"
+      sha256 "2b0acf6dbc510a8f0c45846b48b167ec2bce9712c0d64e52960e03e61f07461b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.4.0/dextui-x86_64-apple-darwin.tar.xz"
-      sha256 "520cd9669dd9c8320f7d59ff318aff35b8489eec87d870fd0214f419b6419397"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.0/dextui-x86_64-apple-darwin.tar.xz"
+      sha256 "ac60ca3792b6afaec39facd20c118b8699f8f90859fe9da29741747d7a68afad"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.4.0/dextui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cf358c01c28ad2ee3486c4cbdda022bd175f32caf496253032597a130fb75d09"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.0/dextui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2b2e69b8e54ce12a04346ce82ce658fe7a80807f693e36091d564e162dfd38e9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.4.0/dextui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4f062dea8438b9469c346197364d9dc1df6a4ff8a15d79dc3a37479f6f6d11d3"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.0/dextui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7f7d7d8d1c063ffd79b4ba610955dc60985fde5f3fa66211629af91b1cb72935"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Dextui < Formula
   end
 
   def install
-    bin.install "dextui" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dextui" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dextui" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dextui" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dextui"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dextui"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dextui"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dextui"
+    end
 
     install_binary_aliases!
 
