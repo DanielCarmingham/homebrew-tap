@@ -1,25 +1,25 @@
 class Dextui < Formula
   desc "A terminal UI for browsing and triaging dex tasks, across every repo and worktree you register"
   homepage "https://github.com/DanielCarmingham/dextui"
-  version "0.5.1"
+  version "0.5.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.1/dextui-aarch64-apple-darwin.tar.xz"
-      sha256 "e086750dcfd4c34891b31c86e81a3910d1b630060ea6ed22289c62213e0f1bfe"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.2/dextui-aarch64-apple-darwin.tar.xz"
+      sha256 "b97eb8d0e666f113b70dc083ab71d13201531d8710ba4767c583bda267de589f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.1/dextui-x86_64-apple-darwin.tar.xz"
-      sha256 "8404894e54efe421b319be8cf53926af262e5d4bc3309628a1208b0cdb606693"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.2/dextui-x86_64-apple-darwin.tar.xz"
+      sha256 "da0217d1009e00c79a74a2ed211e5b39663f2cc1c82647d23982b4ee6c45a05c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.1/dextui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "75785287f552bdeaccff570a869efad02589b1354b28f90a8a558c1e96a67fd8"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.2/dextui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9e0ca5e7351533c3294e8f8fc4a8de6d399fcdc956781435e98d36ddfff3a5bb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.1/dextui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "125c32e4cdd3ee3f8839223305c8d97b15b9deabfacb14f31e38c487c1f856ad"
+      url "https://github.com/DanielCarmingham/dextui/releases/download/v0.5.2/dextui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "59305a4be17fd86aec680978da8934714b44d6cd565f3939d665f42dbeb827a1"
     end
   end
   license "MIT"
