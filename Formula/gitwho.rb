@@ -1,25 +1,25 @@
 class Gitwho < Formula
   desc "Pick the right git identity and credentials for a repository, automatically, wherever it lives on disk"
   homepage "https://github.com/DanielCarmingham/gitwho"
-  version "0.4.0"
+  version "0.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.0/gitwho-aarch64-apple-darwin.tar.xz"
-      sha256 "7002df9e3472dbe47e87b90d5abcc0f93ff89ac55f07adbf3ddd012a3e31c8d6"
+      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.1/gitwho-aarch64-apple-darwin.tar.xz"
+      sha256 "d03f24843aa63330e1836db7f1da7a09ab22f7fb22b62960e9e9e75a936b6e82"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.0/gitwho-x86_64-apple-darwin.tar.xz"
-      sha256 "c7f947529b0cd17450a25a77a75090fb4ee086df85a789d9a94e74d9b74dd87f"
+      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.1/gitwho-x86_64-apple-darwin.tar.xz"
+      sha256 "11d6209b0dab7f910eaf96ed069e933c2098ecd8f42c561b3d24f01970141860"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.0/gitwho-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b227aa4736446ba7d505b09640a9310df77a8e683e93473f1ca4151f86518a34"
+      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.1/gitwho-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3828fdbcdba9616e176fced2da5206c1d99b36a3f4cf6233aa5d2cfffcc30fa7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.0/gitwho-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "37d71c9cfc81745781946dc80e8729abc134def5d49e4ad1af86599eea67802b"
+      url "https://github.com/DanielCarmingham/gitwho/releases/download/v0.4.1/gitwho-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "13abe848642859db205d9c186d506cc15c6f96f26b72427ee50fcf4932ea0e83"
     end
   end
   license "MIT"
