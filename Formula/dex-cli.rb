@@ -1,7 +1,6 @@
 class DexCli < Formula
-  desc "A Rust drop-in for the dex task CLI: same store, config, GitHub and Shortcut sync, and MCP server, with concurrent-safe writes"
-  homepage "https://github.com/DanielCarmingham/dexrs"
-  version "0.1.2"
+  desc "Retired compatibility formula; install dexrust instead"
+  homepage "https://github.com/DanielCarmingham/dexrust"
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/DanielCarmingham/dexrs/releases/download/v0.1.2/dex-cli-aarch64-apple-darwin.tar.xz"
@@ -23,6 +22,7 @@ class DexCli < Formula
     end
   end
   license "MIT"
+  disable! date: "2026-10-03", because: "was renamed to dexrust", replacement_formula: "dexrust"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
