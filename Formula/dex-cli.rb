@@ -22,7 +22,7 @@ class DexCli < Formula
     end
   end
   license "MIT"
-  disable! date: "2026-10-03", because: "was renamed to dexrust", replacement_formula: "dexrust"
+  disable! date: "2026-10-02", because: "was renamed to dexrust", replacement_formula: "dexrust"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
