@@ -1,5 +1,5 @@
 class Dexrust < Formula
-  desc "A Rust drop-in for the dex task CLI: same store, config, GitHub and Shortcut sync, and MCP server, with concurrent-safe writes"
+  desc "Rust drop-in for the dex task CLI with concurrent-safe writes"
   homepage "https://github.com/DanielCarmingham/dexrust"
   version "0.2.0"
   if OS.mac?
@@ -69,5 +69,10 @@ class Dexrust < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  test do
+    assert_match "dexrust v#{version}", shell_output("#{bin}/dexrust version")
+    assert_match "dexrust v#{version}", shell_output("#{bin}/dex version")
   end
 end
