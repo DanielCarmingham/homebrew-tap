@@ -1,7 +1,6 @@
 class Dexrust < Formula
   desc "Rust drop-in for the dex task CLI with concurrent-safe writes"
   homepage "https://github.com/DanielCarmingham/dexrust"
-  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.0/dexrust-aarch64-apple-darwin.tar.xz"
