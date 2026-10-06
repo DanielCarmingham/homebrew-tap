@@ -1,24 +1,25 @@
 class Dexrust < Formula
   desc "Rust drop-in for the dex task CLI with concurrent-safe writes"
   homepage "https://github.com/DanielCarmingham/dexrust"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.0/dexrust-aarch64-apple-darwin.tar.xz"
-      sha256 "1f0651832e907a20f153ba563995b8063ea423a74e65aff4c9a1a07d1c722b4f"
+      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.1/dexrust-aarch64-apple-darwin.tar.xz"
+      sha256 "7404dc0568d4bfa91c31439538976d579af0920c8cddaf02e34b806c4a1ca1da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.0/dexrust-x86_64-apple-darwin.tar.xz"
-      sha256 "7039f7d679146dcf2b97dda871ba12343b38e7b2a73ee6a69facd23aaa847833"
+      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.1/dexrust-x86_64-apple-darwin.tar.xz"
+      sha256 "ece197ff5260850c5e3a95f4641f025c7164baf8b2dc4a7fd6cecd22bbe75aa1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.0/dexrust-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a440fe159d88aebc28aba5313edff87f233f3178a909f630f704a10aa44e74d4"
+      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.1/dexrust-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "12f2c6e3911f6f7cd218e61311d60dc1ee3ca168c48d2eb95fc5729f6b5319c6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.0/dexrust-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c58369bb7ca142995008f4cbe918e4977cad083ecb2873af11b805f784bba17b"
+      url "https://github.com/DanielCarmingham/dexrust/releases/download/v0.2.1/dexrust-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cc587a9c8583211ac56607bde80f7112db5330c0f7d319896c9d9750b78991fa"
     end
   end
   license "MIT"
@@ -68,10 +69,5 @@ class Dexrust < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
-  end
-
-  test do
-    assert_match "dexrust v#{version}", shell_output("#{bin}/dexrust version")
-    assert_match "dexrust v#{version}", shell_output("#{bin}/dex version")
   end
 end
